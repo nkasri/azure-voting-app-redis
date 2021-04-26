@@ -32,7 +32,7 @@ pipeline {
                 }
             }
         }
-        stage('stop  test' app){
+        stage('stop  test app' ){
             steps{
                 pwsh(script:'''
                 docker-compose down
