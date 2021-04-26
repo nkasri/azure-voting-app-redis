@@ -10,8 +10,8 @@ pipeline {
             steps{
             sh 'docker images -a'
             sh """
-            cd azure-voting-app-redis/azure-vote/
-            docker  build -t jenkins-pipeline
+            cd azure-vote/
+            docker  build -t jenkins-pipeline .
             docker images -a
             """
              }
