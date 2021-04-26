@@ -6,6 +6,14 @@ pipeline {
              echo "$GIT_BRANCH"
             }
         }
+        stage('Docker build'){
+            sh 'docker images -a'
+            sh """
+            cd azure-voting-app-redis/azure-vote/
+            docker  build -t jenkins-pipeline
+
+            """
+        }
     }
 
 }
